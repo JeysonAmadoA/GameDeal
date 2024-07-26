@@ -1,0 +1,18 @@
+services:
+
+  db-customer:
+    image: postgres:14
+    container_name: db-customer
+    environment:
+      POSTGRES_PASSWORD: "secret"
+      POSTGRES_USER: "keons"
+      POSTGRES_DB: "game-deal-customer"
+      TZ: "America/Bogota"
+    volumes:
+      - ./postgresql/data:/var/lib/postgresql/data
+    networks:
+      - gameDeal-network
+
+networks:
+  gameDeal-network:
+    driver: bridge
