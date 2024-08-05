@@ -1,7 +1,7 @@
 services:
 
   db-customer:
-    image: postgres:14
+    image: postgres:13
     container_name: db-customer
     environment:
       POSTGRES_PASSWORD: "secret"

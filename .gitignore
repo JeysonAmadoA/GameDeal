@@ -30,4 +30,4 @@ replay_pid*
 .gradle
 
 #Docker
-.Docker/postgresql
+.docker/postgresql
