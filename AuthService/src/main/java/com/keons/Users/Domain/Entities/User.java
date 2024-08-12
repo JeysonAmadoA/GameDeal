@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Data
-@SQLRestriction("deleted at is NULL")
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -25,7 +24,7 @@ import java.util.stream.Collectors;
 public class User implements UserDetails {
 
     @Id
-    private String id;
+    private long id;
 
     private String username;
 

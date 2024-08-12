@@ -18,7 +18,7 @@ public class AuthHelper {
         }
     }
 
-    public static String getActualUser(){
+    public static Long getActualUser(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication != null){
             UserDto userData = (UserDto) authentication.getCredentials();
@@ -27,11 +27,11 @@ public class AuthHelper {
         else return null;
     }
 
-    public static void verifyUserAccess(String userId){
+    public static void verifyUserAccess(Long userId){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication != null){
             UserDto userData = (UserDto) authentication.getCredentials();
-            if (userData.getRole().equals(Role.CUSTOMER.name()) && userData.getId().equals(userId)){
+            if (userData.getRole().equals(Role.CUSTOMER.name()) && userData.getId() != userId){
                 throw new ActionNotAllowedException();
             }
         }

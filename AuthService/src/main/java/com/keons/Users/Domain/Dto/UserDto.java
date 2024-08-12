@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Data
 @Builder
 public class UserDto implements Serializable {
-    private String id;
+    private long id;
     private String username;
     private String email;
     private String documentNumber;

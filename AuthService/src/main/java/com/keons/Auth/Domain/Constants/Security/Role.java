@@ -12,33 +12,18 @@ public enum Role {
             Arrays.asList(
                     Permission.MONITOR_APP,
                     Permission.CREATE_ADMIN,
-                    Permission.CREATE_LIBRARIAN,
                     Permission.CREATE_CUSTOMER,
                     Permission.UPDATE_USERS,
                     Permission.DELETE_USERS,
                     Permission.GET_ALL_USERS,
-                    Permission.GET_ONE_USER,
-                    Permission.CREATE_BOOKCASE,
-                    Permission.DELETE_BOOKCASE,
-                    Permission.UPDATE_BOOKCASE,
-                    Permission.GET_BOOKCASES,
-                    Permission.CREATE_BOOK,
-                    Permission.DELETE_BOOK,
-                    Permission.UPDATE_BOOK,
-                    Permission.GET_BOOKS,
-                    Permission.CREATE_RENT,
-                    Permission.DELETE_RENT,
-                    Permission.UPDATE_RENT,
-                    Permission.GET_RENT
+                    Permission.GET_ONE_USER
             )
     ),
 
     CUSTOMER(
             List.of(
                     Permission.CREATE_CUSTOMER,
-                    Permission.GET_ONE_USER,
-                    Permission.GET_BOOKCASES,
-                    Permission.GET_BOOKS
+                    Permission.GET_ONE_USER
             )
     );
 
