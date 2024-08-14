@@ -13,6 +13,12 @@ services:
     networks:
       - gameDeal-network
 
+  redis:
+    image: redis:7
+    container_name: redis
+    networks:
+      - gameDeal-network
+
 networks:
   gameDeal-network:
     driver: bridge
